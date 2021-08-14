@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZoomCat</title>
+    <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="bgStartModal" class="bg_modal">
+        <section class="start_modal">
+            <img class="start_modal-logo modal-logo" src="./logo.png" alt="">
+            <p id="startContent" class="start_modal-content"></p>
+            <footer class="start_modal--footer">
+                <button id="yesBtn" class="start_modal--footer-btn" onclick="nextLevel()">Yes</button>        
+                <button id="noBtn" class="start_modal--footer-btn" onclick="Forcing()">No</button>
+                <button id="letsGoBtn" class="start_modal--footer-btn" onclick="startGame()">LetsGo</button>
+            </footer>
+        </section>
+    </div>
+    <div class="bg_modal" id="bgSetting">
+        <section id="settingModal" class="setting_modal">
+            <ul class="setting_modal--items">
+                <li class="setting_modal--items-item"><button onclick="Continue()">Continue</button> </li>
+                <li class="setting_modal--items-item"><button onclick="Restart()">Restart</button></li>
+                <li class="setting_modal--items-item">
+                    Theme <i onclick="dropdownF()" id="dropdownO" class=" fa fa-angle-down" aria-hidden="true"></i>
+                    <ul id="dropdown" class="setting_modal--items--item--dropdown">
+                        <li id="pinkMode" onclick="pinkMode()" class="setting_modal--items--item--dropdown-item"><img width="100px" height="50px" src="./bgp.png" alt=""></li>
+                        <li onclick="darkMode()"   class="setting_modal--items--item--dropdown-item"><img width="100px" height="50px" src="./bgb.png" alt=""></li>
+                    </ul>
+                </li>
+                <div></div>
+            </ul>
+        </section>
+    </div>
+    <div id="hoverOpner" class="hoveropner">
+    <footer id="footer" class="footer">
+        <article class="footer--left_side">
+            <button class="footer--left_side--footer_btn" onclick="Fopener()"><i id="footerIcon" class="footer--left_side--footer_btn-icon fa fa-angle-left" aria-hidden="true"></i></button>
+            <span class="footer--left_side-footer-timer"><span id="Minutes"></span> : <span id="Second"></span> </span>
+        </article>
+        <i  id="SMOpener" onclick="SMopener()"  class="footer-setting_btn  fa fa-cog" aria-hidden="true"></i>
+    </footer>
+</div>
+    <div class="bggameover" id="bgGM" >
+        <div class="gameover">
+            <span class="gameover-icon">z</span>
+            <p id="GOcontent"></p>
+        </div>
+    </div>
+    <div class="bgWin" id="bgWin" >
+        <div class="win">
+            <span class="win-icon">z</span>
+            <p id="wincontent"></p>
+        </div>
+    </div>
+    <script src="./zoom_cat.js"></script>
+</body>
+</html>
